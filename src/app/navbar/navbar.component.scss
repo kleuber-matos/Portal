@@ -11,6 +11,10 @@
     height: 23px;
 }
 
+.ngbDropdownItem {
+    color:transparent;
+}
+
 .navbar-toggler.hidden-sm-up, #dropdownManual {
     color: lightgray;
     font-size: 15px;
@@ -23,7 +27,7 @@
 .middle-label-top-navbar {
     color:white;
     font-size: 12px;
-    margin-left: 6em;
+    margin-left: 30em;
     background-color: unset !important;
 }
 
@@ -46,6 +50,12 @@
     width: 100%; 
 }
 
+.blue-nav {
+    height: 4px;
+    background-color: #3e6892;
+    width: 100%; 
+}
+
 .title-atividade-legislativa {
     color: #337ab7;
 }
@@ -54,38 +64,61 @@
     text-decoration: underline; 
 }
 
-.horizontal_dotted_line{
+.horizontal_dotted_line {
     border-bottom: 1px dotted gray;
     margin-top: 5px;
 }
 
-.noHover{
+.noHover {
     background-color: unset !important;
     color: unset !important;
+    margin-left: 19.5em;
 }
 
-.menu-color{
+.btn {
+    margin-left: 24.5em;
+}
+
+.btn-menu {
+    margin-left: 23em;
+}
+
+.menu-color {
     color: #777;
     font-size: 16px;
 }
 
-.Nav-secundaria{
+.Nav-secundaria {
 font-size: 13px;
 padding: 0 15px;
 line-height: 30px;
 border: none;
 border-radius: 0;
-border-top: 1px solid #ccc;
 background-color: #f7f7f7;
 min-height: 30px;
 margin-bottom: 0;
 width: 100%;
 }
 
-.nav{
+.nav {
    float: right;
    column-count: 3;
    column-gap: 10px;
    column-rule: 4px #be1515;
    column-rule-style: solid;
+}
+
+.nav-secundaria-separador {
+    height: 10x;
+    padding-right : 10px;
+    border-right: 1px solid #ccc; 
+}
+
+.nav-secundaria-link {
+    color: #558fc1;
+}
+
+.nav-secundaria-link:hover {
+    background-color: #ebedf3;
+    text-decoration: none;
 }
