@@ -23,7 +23,8 @@
 .middle-label-top-navbar {
     color:white;
     font-size: 12px;
-    margin-left: 6em
+    margin-left: 6em;
+    background-color: unset !important;
 }
 
 .blue-portal {
@@ -56,4 +57,35 @@
 .horizontal_dotted_line{
     border-bottom: 1px dotted gray;
     margin-top: 5px;
+}
+
+.noHover{
+    background-color: unset !important;
+    color: unset !important;
+}
+
+.menu-color{
+    color: #777;
+    font-size: 16px;
+}
+
+.Nav-secundaria{
+font-size: 13px;
+padding: 0 15px;
+line-height: 30px;
+border: none;
+border-radius: 0;
+border-top: 1px solid #ccc;
+background-color: #f7f7f7;
+min-height: 30px;
+margin-bottom: 0;
+width: 100%;
+}
+
+.nav{
+   float: right;
+   column-count: 3;
+   column-gap: 10px;
+   column-rule: 4px #be1515;
+   column-rule-style: solid;
 }
