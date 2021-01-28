@@ -61,7 +61,7 @@
 <div class="green-nav"></div>
 <div class="yellow-nav"></div>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light">
   <!-- <a ngbDropdownItem class="navbar-brand" href="#">Atividade Legislativa</a> -->
 
   <!-- IDENTIFICAÇÃO DO SITE -->
@@ -82,13 +82,28 @@
       </div>
     </div>
   </div>
+
+  <button
+  class="navbar-toggler btn btn-outline-primary"
+  type="button"
+  data-toggle="collapse"
+  data-target="#navbarTogglerDemo02"
+  aria-expanded="false"
+  aria-label="Toggle navigation"
+  (click)="isCollapsed = !isCollapsed"
+  [attr.aria-expanded]="!isCollapsed"
+  aria-controls="navbarTogglerDemo02"
+>
+  <span class="navbar-toggler-icon"></span>
+</button>
+
 </nav>
 
 <nav>
   <div class="horizontal_dotted_line"></div>
 </nav>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg">
   <div
     class="collapse navbar-collapse"
     id="navbarTogglerDemo02"
