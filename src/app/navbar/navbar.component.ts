@@ -8,7 +8,7 @@ import { NgbDropdown } from '@ng-bootstrap/ng-bootstrap'
 })
 export class NavbarComponent implements OnInit {
 
-  isCollapsed = true;
+  isCollapsed = false;
   collapsed = true;
 
   ngOnInit(): void {

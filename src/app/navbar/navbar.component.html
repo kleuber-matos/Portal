@@ -62,41 +62,59 @@
 <div class="yellow-nav"></div>
 
 <nav class="navbar navbar-expand-lg navbar-light">
-  <!-- <a ngbDropdownItem class="navbar-brand" href="#">Atividade Legislativa</a> -->
-
   <!-- IDENTIFICAÇÃO DO SITE -->
-  <div class="container">
-    <div class="row hidden-xs identificacao-site">
-      <div class="col-xs-8">
-        <div class="blue">
-          <h1 class="blue-portal">
-            <a
-              class="title-atividade-legislativa"
-              ngbDropdownItem
-              href="https://www25.senado.leg.br/web/atividade/home"
-            >
-              Atividade Legislativa
-            </a>
-          </h1>
-        </div>
-      </div>
-    </div>
+
+  <div class="blue d-none d-sm-block">
+    <h1 class="blue-portal">
+      <a
+        class="title-atividade-legislativa"
+        ngbDropdownItem
+        href="https://www25.senado.leg.br/web/atividade/home"
+      >
+        Atividade Legislativa
+      </a>
+    </h1>
   </div>
 
+ 
+  <!-- 
   <button
-  class="navbar-toggler btn btn-outline-primary"
-  type="button"
-  data-toggle="collapse"
-  data-target="#navbarTogglerDemo02"
-  aria-expanded="false"
-  aria-label="Toggle navigation"
-  (click)="isCollapsed = !isCollapsed"
-  [attr.aria-expanded]="!isCollapsed"
-  aria-controls="navbarTogglerDemo02"
->
-  <span class="navbar-toggler-icon"></span>
-</button>
+    class="navbar-toggler btn btn-outline-primary"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarTogglerDemo02"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+    (click)="isCollapsed = !isCollapsed"
+    [attr.aria-expanded]="!isCollapsed"
+    aria-controls="navbarTogglerDemo02"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="d-hidden-sm d-hidden-md d-hidden-lg">
+    <a class="navbar-brand" href="#">Menu</a>
+  </div> -->
 
+  <div
+    role="button"
+    class="d-lg-none d-flex py-2 px-4 align-items-center text-body sidebar-collapsed"
+  >
+    <span class="mr-auto">Menu</span>
+    <button
+      class="navbar-toggler btn btn-outline-primary"
+      style="float: right"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarTogglerDemo02"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      (click)="isCollapsed = !isCollapsed"
+      [attr.aria-expanded]="!isCollapsed"
+      aria-controls="navbarTogglerDemo02"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
 </nav>
 
 <nav>
@@ -111,54 +129,52 @@
   >
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item active" ngbDropdown>
-
+        <a
+          ngbDropdownItem
+          class="nav-link"
+          tabindex="0"
+          ngbDropdownToggle
+          id="navbarDropdown1"
+          role="button"
+        >
+          Plenário
+        </a>
+        <div
+          ngbDropdownMenu
+          aria-labelledby="navbarDropdown1"
+          class="dropdown-menu"
+        >
           <a
             ngbDropdownItem
-            class="nav-link"
-            tabindex="0"
-            ngbDropdownToggle
-            id="navbarDropdown1"
-            role="button"
+            ngbDropdownItem
+            href="http://www25.senado.leg.br/web/atividade/sessao-plenaria"
+            >Sess&atilde;o Plen&aacute;ria</a
           >
-            Plenário
-          </a>
-          <div
-            ngbDropdownMenu
-            aria-labelledby="navbarDropdown1"
-            class="dropdown-menu"
+          <a
+            ngbDropdownItem
+            ngbDropdownItem
+            href="http://www.senado.gov.br/atividade/plenario/ordemdodia"
+            >Ordem do Dia</a
           >
-            <a
-              ngbDropdownItem
-              ngbDropdownItem
-              href="http://www25.senado.leg.br/web/atividade/sessao-plenaria"
-              >Sess&atilde;o Plen&aacute;ria</a
-            >
-            <a
-              ngbDropdownItem
-              ngbDropdownItem
-              href="http://www.senado.gov.br/atividade/plenario/ordemdodia"
-              >Ordem do Dia</a
-            >
-            <a
-              ngbDropdownItem
-              ngbDropdownItem
-              href="http://www25.senado.leg.br/web/atividade/pronunciamentos"
-              >Pronunciamentos</a
-            >
-            <a
-              ngbDropdownItem
-              ngbDropdownItem
-              href="http://www25.senado.leg.br/web/atividade/questoes-de-ordem"
-              >Quest&otilde;es de Ordem</a
-            >
-            <a
-              ngbDropdownItem
-              ngbDropdownItem
-              href="http://www25.senado.leg.br/web/atividade/votacoes-nominais"
-              >Vota&ccedil;&otilde;es Nominais</a
-            >
-          </div>
-
+          <a
+            ngbDropdownItem
+            ngbDropdownItem
+            href="http://www25.senado.leg.br/web/atividade/pronunciamentos"
+            >Pronunciamentos</a
+          >
+          <a
+            ngbDropdownItem
+            ngbDropdownItem
+            href="http://www25.senado.leg.br/web/atividade/questoes-de-ordem"
+            >Quest&otilde;es de Ordem</a
+          >
+          <a
+            ngbDropdownItem
+            ngbDropdownItem
+            href="http://www25.senado.leg.br/web/atividade/votacoes-nominais"
+            >Vota&ccedil;&otilde;es Nominais</a
+          >
+        </div>
       </li>
 
       <li class="nav-item active menu" ngbDropdown>
@@ -266,8 +282,24 @@
 <div class="blue-nav"></div>
 <nav class="Nav-secundaria">
   <ul class="nav">
-    <li><a class="nav-secundaria-separador nav-secundaria-link" href="http://www12.senado.leg.br/multimidia">Portal Multimídia</a></li> 
-    <li><a class="nav-secundaria-separador nav-secundaria-link" href="http://legis.senado.leg.br/diarios/Diario">Diários e Anais</a></li>
-    <li><a class="nav-secundaria-link" href="http://dadosabertos.senado.leg.br/">Dados Abertos</a></li>
+    <li>
+      <a
+        class="nav-secundaria-separador nav-secundaria-link"
+        href="http://www12.senado.leg.br/multimidia"
+        >Portal Multimídia</a
+      >
+    </li>
+    <li>
+      <a
+        class="nav-secundaria-separador nav-secundaria-link"
+        href="http://legis.senado.leg.br/diarios/Diario"
+        >Diários e Anais</a
+      >
+    </li>
+    <li>
+      <a class="nav-secundaria-link" href="http://dadosabertos.senado.leg.br/"
+        >Dados Abertos</a
+      >
+    </li>
   </ul>
 </nav>
