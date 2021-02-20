@@ -1,9 +1,27 @@
 .top-navbar {
     line-height: 35px;
-    background-color: #00305c;
     width: 100%;
     display: flex;
-    padding-left: 3em;
+}
+
+.container {
+    line-height: 35px;
+    flex: 1 auto;
+    display: flex;
+    
+    padding-right: 15px;
+    padding-left: 15px;
+    background-color: #00305c;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+.pull-right {
+    float: right !important;
+}
+
+.pull-left {
+    float: left !important;
 }
 
 .senado-logo {
@@ -11,7 +29,7 @@
     height: 23px;
 }
 
-.ngbDropdownItem {
+.top {
     color:transparent;
 }
 
@@ -27,7 +45,7 @@
 .middle-label-top-navbar {
     color:white;
     font-size: 12px;
-    margin-left: 30em;
+
     background-color: unset !important;
 }
 
@@ -62,6 +80,7 @@
 
 .title-atividade-legislativa:hover {
     text-decoration: underline; 
+    background-color: rgb(255, 255, 255);
 }
 
 .horizontal_dotted_line {
@@ -72,7 +91,7 @@
 .noHover {
     background-color: unset !important;
     color: unset !important;
-    margin-left: 19.5em;
+
 }
 
 
@@ -115,3 +134,4 @@ width: 100%;
     background-color: #ebedf3;
     text-decoration: none;
 }
+
