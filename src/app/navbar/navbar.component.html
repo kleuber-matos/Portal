@@ -1,72 +1,149 @@
-<!--TOPO PORTAL-->
-
-<div class="container">
-  <div class="row" style="line-height: 43px">
-    <div class="col-xs-12 col-sm-12 col-lg-12" style="text-align: center">
-      <a href="http://www.senado.leg.br/senado/falecomosenado/" class="hidden-xs" style="color: #FFF; font-size: 12px; margin-left: 6em;">
-        Fale com o Senado</a>
-      <div class="pull-left">
+<header>
+  <!--TOPO PORTAL-->
+  <div class="container">
+    <div class="row" style="line-height: 43px">
+      <div class="col-xs-12 col-sm-12 col-lg-12" style="text-align: center">
         <a
-          class="noHover"
-          ngbDropdownItem
-          href="http://www.senado.leg.br/"
-          title="Volta para a página inicial."
-        >
-          <img src="../../assets/senado.svg"
-        /></a>
-      </div>
-      <!-- <div>
-        <a
-          class="middle-label-top-navbar blue d-none d-md-block"
-          ngbDropdownItem
           href="http://www.senado.leg.br/senado/falecomosenado/"
+          class="hidden-xs"
+          style="color: #fff; font-size: 12px; margin-left: 6em"
         >
           Fale com o Senado</a
         >
-      </div> -->
-
-      <div ngbDropdown #myDrop="ngbDropdown" class="pull-right">
-        <button
-          class="btn pull-right"
-          id="dropdownManual"
-          (click)="myDrop.toggle()"
-        >
-          &#9776; Portais
-        </button>
-        <div
-          ngbDropdownMenu
-          aria-labelledby="navbarDropdown1"
-          class="dropdown-menu btn-menu"
-        >
-          <a ngbDropdownItem href="http://www12.senado.leg.br/institucional"
-            >Institucional</a
+        <div class="pull-left">
+          <a
+            href="http://www.senado.leg.br/"
+            title="Volta para a página inicial."
+            class="logo"
           >
-          <a ngbDropdownItem href="http://www25.senado.leg.br/web/senadores/"
-            >Senadores</a
-          >
-          <a ngbDropdownItem href="http://www25.senado.leg.br/web/atividade/"
-            >Atividade Legislativa</a
-          >
-          <a ngbDropdownItem href="http://www12.senado.leg.br/noticias/"
-            >Notícias</a
-          >
-          <a ngbDropdownItem href="http://www12.senado.leg.br/publicacoes/"
-            >Publicação e Documentação</a
-          >
-          <a ngbDropdownItem href="http://www12.senado.leg.br/orcamento/"
-            >Orçamento</a
-          >
-          <a ngbDropdownItem href="http://www12.senado.leg.br/transparencia/"
-            >Transparência</a
-          >
-          <a ngbDropdownItem href="http://www12.senado.leg.br/ecidadania/"
-            >e-Cidadania</a
-          >
+            <img
+              src="../../assets/senado.svg"
+              width="170"
+              height="23"
+              style="vertical-align: middle"
+          /></a>
         </div>
+
+        <nav class="navbar pull-right">
+        
+          <!-- Step 3: Toggle the value of the property when the toggler button is clicked. -->
+          <button class="navbar-toggler pull-right" 
+          type="button" 
+          style="color: #fff;"
+          (click)="isMenuCollapsed = !isMenuCollapsed">
+            &#9776;
+          </button>
+        
+          <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
+            <ul class="navbar-nav dropdown-menu pull-right"
+            id="menu-portais"
+            role="navigation"
+            >
+              <li>
+                <a href="http://www12.senado.leg.br/institucional"
+                  >Institucional</a
+                >
+              </li>
+              <li>
+                <a href="http://www25.senado.leg.br/web/senadores/"
+                  >Senadores</a
+                >
+              </li>
+              <li>
+                <a href="http://www25.senado.leg.br/web/atividade/"
+                  >Atividade Legislativa</a
+                >
+              </li>
+              <li>
+                <a href="http://www12.senado.leg.br/noticias/">Notícias</a>
+              </li>
+              <li>
+                <a href="http://www12.senado.leg.br/publicacoes/"
+                  >Publicação e Documentação</a
+                >
+              </li>
+              <li>
+                <a href="http://www12.senado.leg.br/orcamento/">Orçamento</a>
+              </li>
+              <li>
+                <a href="http://www12.senado.leg.br/transparencia/"
+                  >Transparência</a
+                >
+              </li>
+              <li>
+                <a href="http://www12.senado.leg.br/ecidadania/">e-Cidadania</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <!-- <div class="pull-right">
+          <button
+            class="navbar-toggler pull-right btn btn-outline-primary"
+            type="button"
+            data-toggle="collapse"
+            data-target="#collapseExample"
+            aria-expanded="false"
+            (click)="isCollapsed = !isCollapsed"
+            [attr.aria-expanded]="!isCollapsed"
+            aria-controls="collapseExample"
+          >
+            Portais
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div> -->
+        <nav class="navbar navbar-expand-lg">
+          <div
+            class="collapse navbar-collapse"
+            id="collapseExample"
+            [ngbCollapse]="isCollapsed"
+          >
+            <ul
+              id="menu-portais"
+              class="dropdown-menu pull-right"
+              role="navigation"
+            >
+              <li>
+                <a href="http://www12.senado.leg.br/institucional"
+                  >Institucional</a
+                >
+              </li>
+              <li>
+                <a href="http://www25.senado.leg.br/web/senadores/"
+                  >Senadores</a
+                >
+              </li>
+              <li>
+                <a href="http://www25.senado.leg.br/web/atividade/"
+                  >Atividade Legislativa</a
+                >
+              </li>
+              <li>
+                <a href="http://www12.senado.leg.br/noticias/">Notícias</a>
+              </li>
+              <li>
+                <a href="http://www12.senado.leg.br/publicacoes/"
+                  >Publicação e Documentação</a
+                >
+              </li>
+              <li>
+                <a href="http://www12.senado.leg.br/orcamento/">Orçamento</a>
+              </li>
+              <li>
+                <a href="http://www12.senado.leg.br/transparencia/"
+                  >Transparência</a
+                >
+              </li>
+              <li>
+                <a href="http://www12.senado.leg.br/ecidadania/">e-Cidadania</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
     </div>
   </div>
-</div>
+</header>
 
 <div class="green-nav"></div>
 <div class="yellow-nav"></div>
@@ -74,38 +151,38 @@
 <nav class="navbar navbar-expand-lg navbar-light">
   <!-- IDENTIFICAÇÃO DO SITE -->
 
-  <div class="blue d-none d-md-block">
-    <h1 class="blue-portal">
-      <a
-        class="title-atividade-legislativa"
-        ngbDropdownItem
-        href="https://www25.senado.leg.br/web/atividade/home"
-      >
-        Atividade Legislativa
-      </a>
-    </h1>
-  </div>
+  <div class="row hidden-xs identificacao-site">
+    <div class="col-xs-8">
+      <div class="blue">
+        <h1 class="blue-portal" style="font-size: 40px; font-weight: 400">
+          <a href="https://www25.senado.leg.br/web/atividade/home">
+            Atividade Legislativa
+          </a>
+        </h1>
+      </div>
+    </div>
 
-  <div
-    role="button"
-    class="d-md-none d-flex py-2 px-4 align-items-center text-body sidebar-collapsed"
-  >
-    Menu
-  </div>
-  <div>
-    <button
-      class="navbar-toggler pull-right d-md-none d-flex btn btn-outline-primary"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarTogglerDemo02"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-      (click)="isCollapsed = !isCollapsed"
-      [attr.aria-expanded]="!isCollapsed"
-      aria-controls="navbarTogglerDemo02"
+    <div
+      role="button"
+      class="d-md-none d-flex py-2 px-4 align-items-center text-body sidebar-collapsed"
     >
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      Menu
+    </div>
+    <div>
+      <button
+        class="navbar-toggler pull-right d-md-none d-flex btn btn-outline-primary"
+        type="button"
+        data-toggle="collapse1"
+        data-target="#navbarTogglerMenu"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        (click)="isCollapsed = !isCollapsed"
+        [attr.aria-expanded]="!isCollapsed"
+        aria-controls="navbarTogglerMenu"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
   </div>
 </nav>
 
@@ -116,7 +193,7 @@
 <nav class="navbar navbar-expand-lg">
   <div
     class="collapse navbar-collapse"
-    id="navbarTogglerDemo02"
+    id="navbarTogglerMenu"
     [ngbCollapse]="isCollapsed"
   >
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">

@@ -3,10 +3,11 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReuniaoComponent } from './reuniao/reuniao.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 // import { ModelsComponent } from './models/agendas.component';
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ReuniaoComponent } from './reuniao/reuniao.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    // NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
