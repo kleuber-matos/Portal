@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./senado.scss',
+  styleUrls: [
               './style.scss',
               './style2015.scss',
               './navbar.component.scss',
